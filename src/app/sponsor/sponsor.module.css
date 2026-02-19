@@ -3,26 +3,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  background-image: url("https://playerhub.df.qq.com/playerhub/bda10ec3-d889-44ac-a8ad-d1c6360fc67d.jpg");
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: calc(100% - 40px);
+  min-height: calc(100vh - 60px - 95px - 40px);
+  margin: 20px 20px 20px 20px auto;
+  border-radius: 12px;
+  box-sizing: border-box;
 }
 .title {
   font-size: 2rem;
   margin: 0.5rem 0;
-}
-.description {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-}
-.link {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-}
-.logo {
-  width: 100px;
-  height: 100px;
-  margin: 1rem 0;
-}
-.logo img {
-  width: 100%;
-  height: auto;
+  color: var(--su-gray-100);
 }
