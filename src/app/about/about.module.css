@@ -1,0 +1,40 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;      /* 整个容器至少占满视口高度 */
+}
+
+/* Header 和 Footer 不需要额外设置，它们的高度由内容撑开，且不会被压缩 */
+/* 如果希望 Header/Footer 不被压缩，可添加 flex-shrink: 0，但默认 flex-shrink:1 也能工作 */
+
+.content {
+  flex: 1 0 auto;         /* 自动伸展填充剩余空间，同时允许根据内容撑高 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* 水平居中 */
+  justify-content: center; /* 垂直居中（当内容少时，内容在 content 内居中） */
+  padding: 1rem;           /* 可选内边距 */
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.link {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 1rem 0;
+}
+
+/* 移除 .logo img 样式，Next.js 的 Image 已自动处理 */

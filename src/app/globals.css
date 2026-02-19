@@ -40,3 +40,21 @@ a {
     color-scheme: dark;
   }
 }
+
+/* globals.css */
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  /* 如需垂直居中内容，可以再加 flex 属性 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
