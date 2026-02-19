@@ -28,9 +28,9 @@ export default function RootLayout({
     <html lang="zh-CN">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
-        <div className="layout">   {/* 内容容器 */}
-          <main className="main-content">{children}</main>
-        </div>
+        <main>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

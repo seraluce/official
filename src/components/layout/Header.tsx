@@ -3,7 +3,7 @@
 import styles from "./Header.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface NavItem {
   name: string;
@@ -18,20 +18,9 @@ const navItems: NavItem[] = [
 
 export default function Header() {
   const [activeItem, setActiveItem] = useState("/");
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      setScrolled(isScrolled);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+    <div className={styles.header}>
       <div className={styles.container}>
         {/* Logo 区域 */}
         <div className={styles.logoSection}>
@@ -69,6 +58,6 @@ export default function Header() {
           <button className={styles.signupBtn}>注册</button>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
